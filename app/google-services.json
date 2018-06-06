@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "897753668061",
+    "firebase_url": "https://randomchatrooms-ba777.firebaseio.com",
+    "project_id": "randomchatrooms-ba777",
+    "storage_bucket": "randomchatrooms-ba777.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897753668061:android:c0ade6faa7f71da9",
+        "android_client_info": {
+          "package_name": "com.namyoon.randomchatrooms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897753668061-evtdfejqlkgpajqammba2mpnvog5ns0n.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "897753668061-evtdfejqlkgpajqammba2mpnvog5ns0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUDgedp1vUuXM-5ZPAI-0lIzRAJqA2Dao"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
