@@ -12,6 +12,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ChatActivity extends AppCompatActivity {
     private ListView lv_chatting;
@@ -43,14 +45,26 @@ public class ChatActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference().child(str_room_name);
 
         setTitle(str_room_name);
-        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arr_room);
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arr_room);
         lv_chatting.setAdapter(arrayAdapter);
         lv_chatting.setTranscriptMode(ListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
 
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Map<String, Object> map = new HashMap<String, Object>();
+                key = reference.push().getKey();
+                reference.updateChildren(map);
+
+                DatabaseReference root = reference.child(key);
+
+                Map<String, Object> objMap = new HashMap<String, Object>();
+                objMap.put("name", str_user_name);
+                objMap.put("message", et_send.getText().toString());
+
+                root.updateChildren(objMap);
+
+                et_send.setText("");
             }
         });
     }
